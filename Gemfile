@@ -3,6 +3,7 @@ gem 'foundation-rails'
 gem 'simple_form'
 gem 'country_select'
 gem 'slick_rails'
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
