@@ -12,8 +12,18 @@
   </head>
 
   <body>
-
+  <header class="row">
+    <%= render 'shared/header'%>
+  </header>
+  <section class="row">
+    <%= render 'shared/navbar' %>
+  </section>
+  <section class="row">
     <%= yield %>
+  </section>
+  <footer class="row">
+    <%= render 'shared/footer' %>
+  </footer>
     <%= javascript_include_tag "application" %>
   </body>
-</html>g
+</html>

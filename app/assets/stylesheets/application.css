@@ -13,5 +13,24 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
+*= require slick
  */
+strong {
+	color: rgb(46,151,255);
+}
+.slick-container {
+	margin-top: 5em;
+	background-color:  rgba(255,165,0,0.3);
+	border-radius: 5px;
+}
+.slick-slide {
+	background-color: lightgrey;
+}
+header {
+	background-color:rgb(129,194,249);
+	border-bottom: 5px solid rgb(46,151,255);
+}
+.navbar {
+	border-bottom: 1px solid grey;
+	margin-bottom: 2px;
+}

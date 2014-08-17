@@ -15,5 +15,12 @@
 //= require foundation
 //= require turbolinks
 //= require_tree .
+//= require slick
 
-$(function(){ $(document).foundation(); });
+$(document).ready(function(){
+	$('.slick').slick({
+	  autoplay: true,
+	  dots: true
+	  
+	});
+});
