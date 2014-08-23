@@ -1,6 +1,24 @@
-<div class="small-3 small-offset-1 columns">
-	<h3 style="color: white">Project Collabo</h3>
+<div class="small-3 columns">
+	<%= link_to(root_path) do %><h3 style="color: white">Project Collabo</h3><% end %>
 </div>
-<div class="small-7 text-right right end column">
-	<p style="color: white">login</p>
+<div class="small-8 text-right columns small-offset-1">
+<% if user_signed_in? %>
+			<div class="right">
+				<p style="color: white">Signed in as <%= current_user.full_name %>.
+				<%= link_to "Sign out", logout_path %></p>
+			</div>
+		<% else%>
+			<% if controller_name != 'sessions' && devise_mapping.registerable? && controller_name != 'registrations'%>
+				<%= render 'devise/sessions/new'%>
+			<% else %>
+				<div class="row">
+					<div class="small-2 columns small-offset-6">
+						<%= link_to "Login", login_path %>
+					</div>
+					<div class="small-4 columns">
+						<%= link_to "Forgot your password?", new_password_path(resource_name) %>
+					</div>
+				</div>
+			<% end %>	
+		<% end %>
 </div>

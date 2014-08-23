@@ -4,9 +4,16 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true %>
-    <%= f.input :password_confirmation, required: true %>
+  	<%= f.input :first_name, required: true, label: "Full Name", placeholder: "First Name" %>
+    <%= f.input :last_name, required: true, label: false, placeholder: "Last Name" %>
+    <%= f.input :email, required: true, autofocus: true, placeholder: "Used to access account" %>
+    <%= f.input :password, required: true, placeholder: "Password" %>
+    <%= f.input :password_confirmation, required: true, label: false, placeholder: "Password Again" %>
+    <%= f.input :profile_name, required: true, placeholder: 'Profile name (a custom profile url)' %>	
+    <%= f.input :country, required: true, priority: ["United States"] %>
+    <%= f.input :gender, collection: [:male, :female] %>
+    <%=f.hidden_field :about_me, :value => "User hasn't updated data" %>
+    <%=f.hidden_field :hobbies, :value => "User hasn't updated data" %>
   </div>
 
   <div class="form-actions">

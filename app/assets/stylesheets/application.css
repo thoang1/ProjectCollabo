@@ -27,6 +27,7 @@ strong {
 	background-color: lightgrey;
 }
 header {
+	padding-top: .5em;
 	background-color:rgb(129,194,249);
 	border-bottom: 5px solid rgb(46,151,255);
 }

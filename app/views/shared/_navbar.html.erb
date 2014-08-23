@@ -1,8 +1,9 @@
+<% if user_signed_in? %>
 <div class='navbar'>
 <nav class="top-bar">
 	<section class="top-bar-section text-center">
 		<ul class="">
-			<li class="small-1"><a href="#">Home</a></li>
+			<li class="small-1"><%= link_to(root_path) do %>Home<% end %></li>
 			<li class="small-1"><a href="#">Profile</a></li>
 			<li class="small-1"><a href="#">Projects</a></li>
 			<li class="small-1"><a href="#">Stories</a></li>
@@ -24,3 +25,4 @@
 	</section>
 </nav>
 </div>
+<% end %>
