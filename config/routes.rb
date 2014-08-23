@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+  get '/:id', to: "profile#show", as: 'profile'
+  resources :profile
   root to: "home#index"
   resources :dashboard
   devise_scope :user do
