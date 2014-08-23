@@ -5,7 +5,7 @@
 <% if user_signed_in? %>
 			<div class="right">
 				<p style="color: white">Signed in as <%= current_user.full_name %>.
-				<%= link_to "Sign out", logout_path %></p>
+				<%= link_to "Sign out", logout_path(resource) %></p>
 			</div>
 		<% else%>
 			<% if controller_name != 'sessions' && devise_mapping.registerable? && controller_name != 'registrations'%>

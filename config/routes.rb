@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
+  get "profile/show"
   get '/:id', to: "profile#show", as: 'profile'
-  resources :profile
+  
   root to: "home#index"
-  resources :dashboard
+  get "dashboard/show"
+
+  get "dashboard", to: "dashboard/show", as: :dashboard
+
   devise_scope :user do
     get 'register', to: "devise/registrations#new", as: :register
     get 'login', to: 'devise/sessions#new', as: :login
