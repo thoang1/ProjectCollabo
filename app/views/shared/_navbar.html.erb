@@ -1,10 +1,16 @@
 <% if user_signed_in? %>
 <div class='navbar'>
-<nav class="top-bar">
+<nav class="top-bar" data-topbar>
 	<section class="top-bar-section text-center">
 		<ul class="">
 			<li class="small-1"><%= link_to(root_path) do %>Home<% end %></li>
-			<li class="small-1"><a href="#">Profile</a></li>
+			<li class="small-1 has-dropdown"><a href="#">Profile</a>
+				<ul class="dropdown">
+          <li><a href="#">View All</a></li>
+          <li><a href="#">Your Profile</a></li>
+          <li><a href="#">Edit Profile</a></li>
+        </ul>
+			</li>
 			<li class="small-1"><a href="#">Projects</a></li>
 			<li class="small-1"><a href="#">Stories</a></li>
 			<li class="small-1"><a href="#">Forums</a></li>
@@ -19,8 +25,13 @@
 	    		</div>
 			  </div>
 			</li>
-			<li class="small-1 columns"><a href="#" class="menu-icon">&#9776</a></li>
-			<li class="small-1 columns"><a href="#">&#9881</a></li>
+			<li class="small-1"><a href="#" class="menu-icon">&#9776</a></li>
+			<li class="small-1 has-dropdown"><a href="#">&#9881</a>
+				<ul class="dropdown">
+					<li><a href="#">Change Password</a></li>
+					<li><a href="#">Account</a></li>
+				</ul>
+			</li>
 		</ul>
 	</section>
 </nav>
