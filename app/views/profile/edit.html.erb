@@ -1,0 +1,9 @@
+<%= simple_form_for @user do |f| %>		
+	<%= f.input :about_me %>
+	<%= f.input :hobby %>
+	<%= f.input :country, as: :country, priority: [ "United States of America", "Germany", "United Kingdom", "Canada" ] %>
+	<%= f.input :gender, collection: [:male, :female], include_blank: false %>
+	<div class="form-actions">
+	   <%= f.button :submit %>
+	</div>
+<% end %>

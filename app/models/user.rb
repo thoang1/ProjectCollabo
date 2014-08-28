@@ -22,7 +22,8 @@ class User < ActiveRecord::Base
   def full_name
   	first_name + ' ' + last_name
   end
-    def to_param
+
+  def to_param
     profile_name
   end
 end
