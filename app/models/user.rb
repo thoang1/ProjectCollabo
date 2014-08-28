@@ -11,11 +11,15 @@ class User < ActiveRecord::Base
   validates :profile_name, presence: true, 
                            uniqueness: true,
                            format: {
-                             with: /\A[a-zA-Z\-\_]+\Z/,
+                             with: /\A[a-z0-9_-]{6,16}+\Z/,
                              message: "Must be formatted correctly."
                            }
 
   validates :country, presence: true
+
+  validates :about_me, presence: true
+
+  validates :hobbies, presence: true
 
   validates :gender, presence: true
 

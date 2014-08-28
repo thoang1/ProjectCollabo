@@ -6,9 +6,9 @@
 			<li class="small-1"><%= link_to(root_path) do %>Home<% end %></li>
 			<li class="small-1 has-dropdown"><a href="#">Profile</a>
 				<ul class="dropdown">
-          <li><a href="#">View All</a></li>
-          <li><a href="#">Your Profile</a></li>
-          <li><a href="#">Edit Profile</a></li>
+          <li><%= link_to "View All", users_path %></li>
+          <li><%= link_to "Your Profile", user_path(current_user) %></li>
+          <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
         </ul>
 			</li>
 			<li class="small-1"><a href="#">Projects</a></li>
@@ -28,8 +28,8 @@
 			<li class="small-1"><a href="#" class="menu-icon">&#9776</a></li>
 			<li class="small-1 has-dropdown"><a href="#">&#9881</a>
 				<ul class="dropdown">
-					<li><a href="#">Change Password</a></li>
-					<li><a href="#">Account</a></li>
+					
+					<li><%= link_to "Account Settings", edit_user_registration_path(current_user) %></li>
 				</ul>
 			</li>
 		</ul>
