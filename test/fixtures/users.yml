@@ -12,3 +12,9 @@ Two:
   last_name: "two"
   email: "two@two.com"
   profile_name: "two345"
+
+Three:
+  first_name: "three"
+  last_name: "three"
+  email: "three@three.com"
+  profile_name: "three456"
