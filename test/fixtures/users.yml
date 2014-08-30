@@ -1,20 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-One:
-  first_name: "One"
-  last_name: "One"
-  email: "One@one.com"
-  profile_name: "one234"
+tyler:
+  first_name: "tyler"
+  last_name: "oliver"
+  email: "tyler8oliver@gmail.com"
+  profile_name: "tyleroliver"
   encrypted_password: "$2a$10$Fh/Hm8RxDsuPTeBUr6864.GARlcmt7zF2WspaXGr3BIv2C27N.osq"
 
-Two:
-  first_name: "two"
-  last_name: "two"
-  email: "two@two.com"
-  profile_name: "two345"
+zach:
+  first_name: "zach"
+  last_name: "martin"
+  email: "zach@gmail.com"
+  profile_name: "zachmart"
 
-Three:
-  first_name: "three"
-  last_name: "three"
-  email: "three@three.com"
-  profile_name: "three456"
+chad:
+  first_name: "chad"
+  last_name: "chadston"
+  email: "chad@gmail.com"
+  profile_name: "chadder4"
+
+
