@@ -24,7 +24,15 @@ class User < ActiveRecord::Base
   validates :gender, presence: true
 
   has_many :user_friendships
-  has_many :friends, through: :user_friendships
+  has_many :friends, -> { where(user_friendships: { state: "accepted"}) }, through: :user_friendships
+
+  has_many :pending_user_friendships, -> { where user_friendships: { state: 'pending'} }, 
+                                        class_name: 'UserFriendship', foreign_key: :user_id
+
+  has_many :pending_friends, 
+              -> { where user_friendships: { state: "pending" } }, 
+                 through: :user_friendships,
+                 source: :friend                                 
 
   def full_name
   	first_name + ' ' + last_name

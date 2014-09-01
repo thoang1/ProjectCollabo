@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140829023911) do
+ActiveRecord::Schema.define(version: 20140830182539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(version: 20140829023911) do
     t.integer  "friend_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state"
   end
 
+  add_index "user_friendships", ["state"], name: "index_user_friendships_on_state", using: :btree
   add_index "user_friendships", ["user_id", "friend_id"], name: "index_user_friendships_on_user_id_and_friend_id", using: :btree
 
   create_table "user_networks", force: true do |t|

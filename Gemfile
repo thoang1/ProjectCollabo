@@ -4,10 +4,13 @@ gem 'simple_form'
 gem 'country_select'
 gem 'slick_rails'
 gem 'devise'
+gem 'state_machine'
 
 group :test do
 	gem 'shoulda'
+	gem 'factory_girl_rails'
 end
+
 group :production, :staging do
   gem 'rails_12factor'
 end

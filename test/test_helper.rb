@@ -4,11 +4,15 @@ require 'rails/test_help'
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  include Devise::TestHelpers
-  include Warden::Test::Helpers
-  Warden.test_mode!
+  include FactoryGirl::Syntax::Methods
+
+  ActiveRecord::Migration.check_pending!
+
   fixtures :all
 
 
   # Add more helper methods to be used by all tests here...
+end
+class ActionController::TestCase
+  include Devise::TestHelpers
 end
