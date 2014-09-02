@@ -4,12 +4,15 @@ gem 'simple_form'
 gem 'country_select'
 gem 'slick_rails'
 gem 'devise'
+gem 'will_paginate', '~> 3.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'shoulda'
+  gem 'rspec-its'
+  gem 'faker'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
