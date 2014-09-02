@@ -3,7 +3,7 @@ class UserFriendship < ActiveRecord::Base
 	belongs_to :friend, class_name: 'User', foreign_key: 'friend_id'
 
 	state_machine :state, initial: :pending do
-		after_transition on: :accept, do: :send_acceptance_email
+		after_transition on: :accept, do: [:send_acceptance_email, :accept_mutual_friendship!]
 
 		state :requested
 
@@ -17,7 +17,7 @@ class UserFriendship < ActiveRecord::Base
 			friendship1 = create(user: user1, friend: user2, state: 'pending')
 			friendship2 = create(user: user2, friend: user1, state: 'requested')
 
-			friendship1.send_request_email
+			riendship1.send_request_email if !friendship1.new_record?
 			friendship1
 		end
 	end
