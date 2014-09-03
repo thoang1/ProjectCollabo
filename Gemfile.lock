@@ -182,7 +182,6 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  coffee-rails (~> 4.0.0)
   country_select
   devise
   factory_girl_rails
