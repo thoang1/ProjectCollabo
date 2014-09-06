@@ -1,12 +1,36 @@
 <h1><%= @user.full_name %>'s Profile!</h1>
 <div><%= @user.email %></div>
-<div>About me: <%= @user.about_me %></div>
-<div>Hobbies: <%= @user.hobbies %></div>
 <div>country: <%= @user.country %></div>
-<div>gender: <%= @user.gender %></div>
+<%= render 'follow_form' if signed_in? %>
+<dl class="tabs" data-tab>
+  <dd><a href="#panel1">Profile</a></dd>
+  <dd><a href="#panel2">Network</a></dd>
+  <dd><a href="#panel3">Gallery</a></dd>
+  <dd><a href="#panel4">Calender</a></dd>
+</dl>
+<div class="tabs-content">
+  <div class="content" id="panel1">
+    <p>
+    	<div>About me: <%= @user.about_me %></div>
+		<div>Hobbies: <%= @user.hobbies %></div>
+		
+		<div>gender: <%= @user.gender %></div>
+	</p>
+  </div>
+  <div class="content" id="panel2">
+    <p><%= render 'shared/follow_stats' %></p>
+  </div>
+  <div class="content" id="panel3">
+    <p>Pictures yo</p>
+  </div>
+  <div class="content" id="panel4">
+    <p>Fucking calendershit</p>
+  </div>
+</div>
+
+
 
 
 <section>
-        <%= render 'shared/follow_stats' %>
+        
 </section>
-<%= render 'follow_form' if signed_in? %>
